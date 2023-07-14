@@ -30,10 +30,9 @@
 
 \documentclass[
 	% -- opções da classe memoir --
+	article,			% indica que é um artigo acadêmico
 	12pt,						% tamanho da fonte
-	openany,					% capítulos começam em pág ímpar (insere página vazia caso preciso)
 	oneside,					% para impressão em recto e verso. Oposto a oneside
-	openright,
 	a4paper,					% tamanho do papel. 
 	% -- opções da classe abntex2 --
 	%chapter=TITLE,				% títulos de capítulos convertidos em letras maiúsculas
@@ -45,6 +44,7 @@
 	french,						% idioma adicional para hifenização
 	spanish,					% idioma adicional para hifenização
 	brazil						% o último idioma é o principal do documento
+	sumario=tradicional
 	]{abntex2}
 
 
@@ -58,6 +58,7 @@
 \usepackage{lipsum}				% para geração de dummy text
 \usepackage[brazilian,hyperpageref]{backref}	 % Paginas com as citações na bibl
 \usepackage[alf]{abntex2cite}	% Citações padrão ABNT
+\usepackage{microtype} 			% para melhorias de justificação
 \usepackage{multirow}
 
 \usepackage{pdfpages}
@@ -140,15 +141,13 @@
 \input{config_pdf}
 
 
-
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %																					 %
 % 							 Início do documento								     %
 %																					 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{document}
-\gdef\clearforchapter{}
+
 
 %\selectlanguage{english}
 \selectlanguage{brazil}
@@ -166,9 +165,9 @@
 
 
 % inserir o sumario
-\pdfbookmark[0]{\contentsname}{toc}
-\tableofcontents*
-\cleardoublepage%
+% \pdfbookmark[0]{\contentsname}{toc}
+% \tableofcontents*
+% \cleardoublepage%
 
 %-------------------------------------------------------------------------------------
 % 		ELEMENTOS TEXTUAIS
@@ -177,12 +176,12 @@
 \textual%
 
 \include{capitulos/introducao}
-\include{capitulos/metodologia}
-\include{capitulos/pesquisa}
-\include{capitulos/ensino}
-\include{capitulos/trabalhos}
-\include{capitulos/conclusao}
-\include{capitulos/futuro}
+% \include{capitulos/metodologia}
+% \include{capitulos/pesquisa}
+% \include{capitulos/ensino}
+% \include{capitulos/trabalhos}
+% \include{capitulos/conclusao}
+% \include{capitulos/futuro}
 
 % Adiciona espaço de parte no Sumário
 \phantompart%
