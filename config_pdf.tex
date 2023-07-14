@@ -1,6 +1,46 @@
 % alterando o aspecto da cor azul
 \definecolor{blue}{RGB}{41,5,195}
 
+% alterando a capa
+\renewcommand{\imprimircapa}{%
+  \begin{capa}%
+
+	
+	\hbox {
+	\hspace{1.3cm}
+	\includegraphics[scale=0.15]{imagens/UFBA.jpg}
+	\hspace{3cm}
+	\includegraphics[scale=0.07]{imagens/EPT.jpg}
+	\hspace{3cm}
+	\includegraphics[scale=0.192]{imagens/PPGEE.png}
+	}
+    
+	\center
+    \ABNTEXchapterfont{\textsc{\large{Universidade Federal da Bahia}}}\\
+    \textsc{\large{Escola Politécnica}}\\
+    \textsc{\large{Programa de Pós-Graduação em Engenharia Elétrica}}\\
+    \textsc{\small{Doutorado em Engenharia Elétrica}}\\
+
+    \vspace*{1cm}
+
+    {\ABNTEXchapterfont\large\imprimirautor}
+
+    \vfill
+    \begin{center}
+    \ABNTEXchapterfont{\bfseries\LARGE\imprimirtitulo}\\
+	\large{Orientador: \imprimircoorientador}\\
+	\large{Coorientador: \imprimirorientador}
+    \end{center}
+    \vfill
+
+    \large\imprimirlocal
+
+    \large\imprimirdata
+
+    \vspace*{1cm}
+  \end{capa}
+}
+
 % informações do PDF
 \makeatletter
 \hypersetup{
