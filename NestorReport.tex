@@ -31,8 +31,9 @@
 \documentclass[
 	% -- opções da classe memoir --
 	12pt,						% tamanho da fonte
-	openright,					% capítulos começam em pág ímpar (insere página vazia caso preciso)
+	openany,					% capítulos começam em pág ímpar (insere página vazia caso preciso)
 	oneside,					% para impressão em recto e verso. Oposto a oneside
+	openright,
 	a4paper,					% tamanho do papel. 
 	% -- opções da classe abntex2 --
 	%chapter=TITLE,				% títulos de capítulos convertidos em letras maiúsculas
@@ -141,19 +142,19 @@
 
 
 
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %																					 %
 % 							 Início do documento								     %
 %																					 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{document}
+\gdef\clearforchapter{}
 
 %\selectlanguage{english}
 \selectlanguage{brazil}
 
 % Retira espaço extra obsoleto entre as frases.
-\frenchspacing 
+\frenchspacing
 
 %-------------------------------------------------------------------------------------
 % 		ELEMENTOS PRÉ-TEXTUAIS
@@ -175,8 +176,13 @@
 %-------------------------------------------------------------------------------------
 \textual%
 
-\include{capitulos/capitulo_introducao}
-
+\include{capitulos/introducao}
+\include{capitulos/metodologia}
+\include{capitulos/pesquisa}
+\include{capitulos/ensino}
+\include{capitulos/trabalhos}
+\include{capitulos/conclusao}
+\include{capitulos/futuro}
 
 % Adiciona espaço de parte no Sumário
 \phantompart%
